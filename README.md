@@ -5,7 +5,9 @@ A clean and modern Android app that displays trending movies using The Movie Dat
 
 ## 🚀 Features
 
-- 🔐 **User List and User Creation Integration** 
+- 🔐 **User Selection & Creation**
+  - Users can be created offline.
+  - Local data is auto-synced with the server once network connectivity is available. 
 - 🎞️ **Trending Movies Listing**
   - Movie Poster, Title, Release Date
   - Infinite scroll with Paging 3
@@ -22,6 +24,8 @@ A clean and modern Android app that displays trending movies using The Movie Dat
 - 🌙 **Dark Mode Support**
 - 🔄 **Loading Indicators**
   - Shimmer effect while loading movie data
+- 🔌 **Offline Support**
+  - User creation works without internet and syncs automatically when connected.
 - 🌐 **Landscape Mode Supported**
 
 ---
