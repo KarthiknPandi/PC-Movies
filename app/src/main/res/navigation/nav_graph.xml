@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/userListFragment">
+
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="com.example.pcmovies.ui.user.UserListFragment"
+        android:label="User List"
+        tools:layout="@layout/fragment_user_list">
+        <action
+            android:id="@+id/action_userListFragment_to_movieListFragment"
+            app:destination="@id/movieListFragment" />
+        <action
+            android:id="@+id/action_userListFragment_to_addUserFragment"
+            app:destination="@id/addUserFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/movieListFragment"
+        android:name="com.example.pcmovies.ui.movie.MovieListFragment"
+        android:label="Movies"
+        tools:layout="@layout/fragment_movie_list">
+        <action
+            android:id="@+id/action_movieListFragment_to_movieDetailFragment"
+            app:destination="@id/navigation" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/addUserFragment"
+        android:name="com.example.pcmovies.ui.newuser.AddUserFragment"
+        android:label="Add User"
+        tools:layout="@layout/fragment_add_user"/>
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/movieDetailFragment">
+        <fragment
+            android:id="@+id/movieDetailFragment"
+            android:name="com.example.pcmovies.ui.moviedetails.MovieDetailFragment"
+            android:label="Movie Detail">
+            <argument
+                android:name="movie_id"
+                app:argType="integer" />
+        </fragment>
+    </navigation>
+</navigation>
