@@ -63,7 +63,12 @@ class UserListFragment : Fragment() {
 
     private fun setupRecyclerView() {
         userAdapter = UserAdapter {
-            navController.navigate(R.id.action_userListFragment_to_movieListFragment)
+            if(NetworkUtils.isOnline(requireContext())){
+                navController.navigate(R.id.action_userListFragment_to_movieListFragment)
+            }else{
+                Toast.makeText(requireContext(), "No internet connection", Toast.LENGTH_SHORT).show()
+            }
+            
         }
 
         binding.recyclerView.apply {
