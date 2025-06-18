@@ -39,9 +39,3 @@ A clean and modern Android app that displays trending movies using The Movie Dat
 
 ---
 
-## ✅ Assumptions
-
-- A valid TMDb API key is required.
-- No login or authentication is required for demo purposes.
-
----
